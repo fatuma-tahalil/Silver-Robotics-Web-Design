@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/*Section 1a: Navigation Bar*/
 .nav{
     right:0;
     margin:0%;
@@ -8,7 +10,6 @@
     justify-content:space-between;
     align-items:center;
 }
-
 .nav .links{
     width:100%;
     display:flex;
@@ -21,10 +22,27 @@
     font-size: 2rem;
     font-family:'Lucida Sans';
 }
-
 .nav img, fieldset{
     padding:0;
     margin:0;
     height:20rem;
     border:0;
+}
+
+/*Section 2a: Introductions*/
+.intro-container{
+    display:flex;
+    flex-flow:row wrap;
+    padding:2%;
+    justify-content:space-evenly;
+}
+.intro-container img{max-width:49%;} /*stops image from growing to large*/
+.text-container{ border:1px solid black;padding-left:2%;}
+.intro-container .text-container h1{
+    font-size:3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.intro-container .text-container p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width:70%;
 }
