@@ -1,2 +1,2 @@
-# Silver-Robotics-Web-Design
-Practicing web-design by creating a robotics website for Silver robotics.
+A fake website for Silver Robotics FRC team 9575.
+This website is not the actual website for team 9575.
