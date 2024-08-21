@@ -32,17 +32,18 @@
 /*Section 2a: Introductions*/
 .intro-container{
     display:flex;
-    flex-flow:row wrap;
+    flex-flow:row nowrap;
     padding:2%;
     justify-content:space-evenly;
 }
-.intro-container img{max-width:49%;} /*stops image from growing to large*/
-.text-container{ border:1px solid black;padding-left:2%;}
+.intro-container img{max-width:50%;} /*stops image from growing to large*/
+.text-container{ margin-left:5%;}
 .intro-container .text-container h1{
     font-size:3rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-.intro-container .text-container p{
+.intro-container .text-container #intro-text{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    width:70%;
+    font-size:1.2rem;
+    width:80%;
 }
