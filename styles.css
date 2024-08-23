@@ -43,32 +43,29 @@ body{margin:0;}
 }
 
 /*Section 3a: Sponors*/
-#sponsor-title{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size:3rem;
-    font-weight:900;
-    text-align:center;
-    margin:4% 0 4% 0;
-}
 .sponsors-container{
     display:flex;
     flex-direction:row;
-    overflow:none;
+    height:22rem;
+    align-items:center;
+    margin-top:3rem;
+}
+#sponsor-title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:4rem;
+    font-weight:900;
+    text-align:center;
+    width:40%;
+}
+.sponsor-images{
+    display:flex;
+    flex-flow:row wrap;
     justify-content:space-evenly;
+    display:flex;
+    width:60%;
 }
-.sponsors-container button{
-    width:8%;
-    border:0;
-    z-index:2;
-    position:absolute;
-    background-color:transparent;
-    align-self:center;
-}
-.sponsors-container #left-button{left:0;}
-.sponsors-container #right-button{right:0;}
 .sponsors-container img{
-    max-width:20%; 
-    border:1px solid rgb(21, 17, 17);
+    max-width:20%;
 
 }
 
