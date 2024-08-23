@@ -48,29 +48,27 @@ body{margin:0;}
     flex-direction:row;
     height:22rem;
     align-items:center;
-    margin-top:3rem;
+    margin:3rem 3rem 0 3rem;
 }
-#sponsor-title{
+.sponsors-container #sponsor-title{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:4rem;
     font-weight:900;
     text-align:center;
-    width:40%;
+    width:35%;
 }
-.sponsor-images{
+.sponsors-container .sponsor-images{
+    width:auto;
+    height:100%;
     display:flex;
     flex-flow:row wrap;
-    justify-content:space-evenly;
-    display:flex;
-    width:60%;
 }
-.sponsors-container img{
-    max-width:20%;
-
+.sponsors-container .sponsor-images img{
+    max-width: 20rem;
+    max-height: 30rem;
+    margin:0 1% 1% 0;
 }
-
 /*Section 4a: Footer*/
-/*Section 3: Footer*/
 footer{
     position:relative;
     bottom:0;
