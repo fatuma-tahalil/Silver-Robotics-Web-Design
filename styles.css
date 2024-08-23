@@ -54,5 +54,21 @@ body{margin:0;}
     display:flex;
     flex-direction:row;
     overflow:none;
+    justify-content:space-evenly;
+    margin-bottom:15%;
 }
-.sponsors-container img{max-width:30%;}
+.sponsors-container button{
+    width:8%;
+    border:0;
+    z-index:2;
+    position:absolute;
+    background-color:transparent;
+    align-self:center;
+}
+
+.sponsors-container #left-button{left:0;}
+.sponsors-container #right-button{right:0;}
+.sponsors-container img{
+    max-width:25%; 
+    border:1px solid black;
+}
