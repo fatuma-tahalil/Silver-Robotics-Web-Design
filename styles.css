@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+*{
+    box-sizing:border-box;
+}
+
 body{margin:0;}
+.spacing{
+    height:20vh;
+}
 /*Section 1a: Navigation Bar*/
 .nav{
     background-color:rgb(246, 246, 246);
@@ -26,19 +33,39 @@ body{margin:0;}
 /*Section 2a: Introductions*/
 .intro-container{
     display:block;
+}
+.intro-container .intro1{
+    display:flex;
+    justify-content:center;
+    margin-bottom:5%;
+}
+.intro-container .intro1 img{max-width:100%; } 
+.intro-container .intro1 h1{
+    position:absolute;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:6rem;
+    bottom:5%;
+    z-index:2;
+}
+.intro-container .intro2{
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+}
+.intro-container .intro2 .intro-text{
+    width:35%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.intro-container .intro2 .intro-text h1{
     text-align:center;
-}
-.intro-container img{max-width:100%; max-height:100%;} /*stops image from growing to large*/
-.intro-container .text-container{ margin-left:5%;}
-.intro-container .text-container h1{
     font-size:2.6rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-.intro-container .text-container #intro-text{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.intro-container .intro2 .intro-text p{
     font-size:1.2rem;
-    width:80%;
+    width:100%;
 }
+.intro-container .intro2 img{max-width:45%;}
 
 /*Section 3a: Sponors*/
 .sponsors-container{
@@ -46,7 +73,6 @@ body{margin:0;}
     flex-direction:row;
     height:22rem;
     align-items:center;
-    margin:3rem 3rem 0 3rem;
 }
 .sponsors-container #sponsor-title{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -72,7 +98,6 @@ footer{
     position:relative;
     justify-content:space-between;
     bottom:0;
-    margin-top: 15%;
     width: 100%;
     height: 10%;
     display: flex;
@@ -81,7 +106,7 @@ footer{
 
 footer h1{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color:white;
 }
 footer .social-media{
