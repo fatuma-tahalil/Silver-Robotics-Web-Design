@@ -3,10 +3,10 @@
 body{margin:0;}
 /*Section 1a: Navigation Bar*/
 .nav{
-    margin:0 0 3% 0;
+    background-color:rgb(246, 246, 246);
+    margin:0;
     padding: 2%;
     display: flex;
-    border-bottom: 1px solid black;
     justify-content:space-between;
     align-items:center;
 }
@@ -25,13 +25,11 @@ body{margin:0;}
 
 /*Section 2a: Introductions*/
 .intro-container{
-    display:flex;
-    flex-flow:row nowrap;
-    padding:2%;
-    justify-content:space-evenly;
+    display:block;
+    text-align:center;
 }
-.intro-container img{max-width:50%;} /*stops image from growing to large*/
-.text-container{ margin-left:5%;}
+.intro-container img{max-width:100%; max-height:100%;} /*stops image from growing to large*/
+.intro-container .text-container{ margin-left:5%;}
 .intro-container .text-container h1{
     font-size:2.6rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
