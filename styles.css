@@ -7,17 +7,18 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
-.font-newAmsterdam{
-    font-family: "New Amsterdam", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.font-righteous{
+    font-family: "Righteous", sans-serif;
     font-weight: 400;
-    font-style: regular;
+    font-style: normal;
 }
 
 body{margin:0;}
 .spacing{
-    height:20vh;
+    height:40vh;
 }
+
 /*Section 1a: Navigation Bar*/
 .nav{
     background-color:rgb(246, 246, 246);
@@ -39,6 +40,7 @@ body{margin:0;}
     color:black;
     text-decoration: none;
     font-size: 2rem;
+    font-family:sans-serif;
 }
 
 /*Section 2a: Introductions*/
