@@ -24,14 +24,16 @@ body{margin:0;}
     margin:0;
     padding: 2%;
     display: flex;
-    justify-content:space-between;
-    align-items:center;
+    justify-content:flex-end;
 }
 .nav .links{
-    width:100%;
+    width:50%;
     display:flex;
-    align-items:center;
     justify-content:space-evenly;
+}
+.nav .links .line{
+    font-size:2.5rem;
+    user-select:none;
 }
 .nav a{
     color:black;
