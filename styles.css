@@ -1,30 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     box-sizing:border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/*Font classes*/
 .font-nunito{
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 .font-righteous{
     font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+.font-notoSans{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
 body{margin:0;}
-.large-spacing{
-    height:15rem;
-}
-.medium-spacing{
-    height:6rem;
-}
-.small-text{
-    font-size:1.2rem;
-    line-height: 140%;
-}
+.large-spacing{height:15rem;}
+.medium-spacing{height:6rem;}
+.large-text{font-size:5rem;}
+.medium-text{font-size:2.3rem;}
+.small-text{line-height: 140%; font-size:1.2rem;}
 
 /*Section 1a: Navigation Bar*/
 .nav{
@@ -39,13 +41,12 @@ body{margin:0;}
     justify-content:space-evenly;
 }
 .nav .links .line{
-    font-size:2.5rem;
     user-select:none;
 }
 .nav a{
+    font-size:1.3rem;
     color:black;
     text-decoration: none;
-    font-size: 2rem;
     font-family:sans-serif;
 }
 
@@ -62,7 +63,6 @@ body{margin:0;}
 .intro-container .intro1 h1{
     position:absolute;
     color:white;
-    font-size:6rem;
     bottom:5%;
     z-index:2;
     user-select:none;
@@ -79,7 +79,6 @@ body{margin:0;}
 }
 .intro-container .intro2 .intro-text h1{
     text-align:center;
-    font-size:2.6rem;
 }
 .intro-container .intro2 .intro-text p{width:100%;}
 .intro-container .intro2 img{max-width:45%;}
@@ -108,7 +107,6 @@ body{margin:0;}
     align-items:center;
 }
 .sponsors-container #sponsor-title{
-    font-size:4rem;
     font-weight:900;
     text-align:center;
     width:35%;
@@ -138,7 +136,6 @@ footer{
 
 footer h1{
     padding-left:1%;
-    font-size: 2.2rem;
     color:white;
 }
 footer .social-media{
