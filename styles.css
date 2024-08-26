@@ -15,13 +15,15 @@
 }
 
 body{margin:0;}
-.spacing{
-    height:30vh;
+.large-spacing{
+    height:15rem;
+}
+.medium-spacing{
+    height:6rem;
 }
 
 /*Section 1a: Navigation Bar*/
 .nav{
-    background-color:rgb(246, 246, 246);
     margin:0;
     padding: 2%;
     display: flex;
@@ -79,6 +81,22 @@ body{margin:0;}
     line-height: 160%;
 }
 .intro-container .intro2 img{max-width:45%;}
+
+/*Section 2b: About*/
+.about-container{
+    margin: 0 auto 0 auto;
+    width:90%;
+    align-self:center;
+    border:1px solid black;
+    padding:2%;
+}
+.mission-container{
+    margin: 0 auto 0 auto;
+    width:90%;
+    align-self:center;
+    border:1px solid black;
+    padding:2%;
+}
 
 /*Section 3a: Sponors*/
 .sponsors-container{
