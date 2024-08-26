@@ -21,6 +21,10 @@ body{margin:0;}
 .medium-spacing{
     height:6rem;
 }
+.small-text{
+    font-size:1.2rem;
+    line-height: 140%;
+}
 
 /*Section 1a: Navigation Bar*/
 .nav{
@@ -67,19 +71,17 @@ body{margin:0;}
     display:flex;
     width:100%;
     justify-content:space-evenly;
+    align-items:center;
 }
 .intro-container .intro2 .intro-text{
     width:35%;
+    height:min-content;
 }
 .intro-container .intro2 .intro-text h1{
     text-align:center;
     font-size:2.6rem;
 }
-.intro-container .intro2 .intro-text p{
-    font-size:1.2rem;
-    width:100%;
-    line-height: 160%;
-}
+.intro-container .intro2 .intro-text p{width:100%;}
 .intro-container .intro2 img{max-width:45%;}
 
 /*Section 2b: About*/
@@ -87,15 +89,15 @@ body{margin:0;}
     margin: 0 auto 0 auto;
     width:90%;
     align-self:center;
-    border:1px solid black;
     padding:2%;
+    height:min-content;
 }
 .mission-container{
     margin: 0 auto 0 auto;
     width:90%;
     align-self:center;
-    border:1px solid black;
     padding:2%;
+    height:min-content;
 }
 
 /*Section 3a: Sponors*/
