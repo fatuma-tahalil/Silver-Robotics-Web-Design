@@ -21,12 +21,10 @@
     font-style: normal;
 }
 
-body{margin:0;}
+html{scroll-behavior: smooth; overflow-x:hidden;}
+body{margin:0;overflow-x:hidden;}
 .large-spacing{height:15rem;}
 .medium-spacing{height:6rem;}
-.large-text{font-size:5rem;}
-.medium-text{font-size:2.3rem;}
-.small-text{line-height: 140%; font-size:1.2rem;}
 
 /*Section 1a: Navigation Bar*/
 .nav{
@@ -49,6 +47,10 @@ body{margin:0;}
     text-decoration: none;
     font-family:sans-serif;
 }
+/*Section 1a: Mobile Navigation Bar*/
+@media screen and (max-width: 600px){
+    .nav{display:none;}
+}
 
 /*Section 2a: Introductions*/
 .intro-container{
@@ -63,9 +65,10 @@ body{margin:0;}
 .intro-container .intro1 h1{
     position:absolute;
     color:white;
-    bottom:5%;
+    bottom:3rem;
     z-index:2;
     user-select:none;
+    font-size:5rem;
 }
 .intro-container .intro2{
     display:flex;
@@ -79,17 +82,29 @@ body{margin:0;}
 }
 .intro-container .intro2 .intro-text h1{
     text-align:center;
+    font-size:5rem;
 }
-.intro-container .intro2 .intro-text p{width:100%;}
+.intro-container .intro2 .intro-text p{width:100%; font-size:1.2rem; line-height:140%;}
 .intro-container .intro2 img{max-width:45%;}
 
-/*Section 2b: About*/
+/*Section 2a: Mobile Introductions*/
+@media screen and (max-width: 600px){
+    .intro-container .intro1 h1{
+        font-size:1rem;
+        border:2px solid black;
+
+    }
+}
+
+    /*Section 2b: About*/
 .about-container{
     margin: 0 auto 0 auto;
     width:90%;
     align-self:center;
     padding:2%;
     height:min-content;
+    font-size:1.2rem;
+    line-height:140%;
 }
 .mission-container{
     margin: 0 auto 0 auto;
@@ -97,6 +112,8 @@ body{margin:0;}
     align-self:center;
     padding:2%;
     height:min-content;
+    font-size:1.2rem;
+    line-height:140%;
 }
 
 /*Section 3a: Sponors*/
@@ -110,6 +127,7 @@ body{margin:0;}
     font-weight:900;
     text-align:center;
     width:35%;
+    font-size:4.8rem;
 }
 .sponsors-container .sponsor-images{
     width:auto;
@@ -137,6 +155,7 @@ footer{
 footer h1{
     padding-left:1%;
     color:white;
+    font-size:2.3rem;
 }
 footer .social-media{
     position:relative;
@@ -149,6 +168,7 @@ footer .social-media a{
     color:white;
     text-decoration:none;
     padding-right:6%;
+    font-size:1.2rem;
 }
 footer .social-media img{
     max-width:3rem;
