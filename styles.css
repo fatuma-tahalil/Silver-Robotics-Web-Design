@@ -84,18 +84,22 @@ body{margin:0;overflow-x:hidden;}
 .intro-container .intro2 .intro-text h1{
     text-align:center;
     font-size:5rem;
+    margin:0;
 }
 .intro-container .intro2 .intro-text p{width:100%; font-size:1.2rem; line-height:140%;}
 .intro-container .intro2 img{max-width:45%;}
-
 /*Section 2a: Mobile Introductions*/
 @media screen and (max-width: 650px){
-    .intro-container .intro1 h1{
-        font-size:3.5rem;
-    }
+    .medium-spacing{height:2rem;}
+    .large-spacing{height:4rem;}
+    .intro-container .intro1 h1{font-size:4rem;}
+    .intro-container .intro2{flex-direction: column;}
+    .intro-container .intro2 .intro-text{width:80%;}
+    .intro-container .intro2 .intro-text h1{font-size:3.5rem;}
+    .intro-container .intro2 img{max-width:80%;}
 }
 
-    /*Section 2b: About*/
+/*Section 2b: About*/
 .about-container{
     margin: 0 auto 0 auto;
     width:90%;
@@ -124,10 +128,12 @@ body{margin:0;overflow-x:hidden;}
 }
 .sponsors-container #sponsor-title{
     font-weight:900;
-    text-align:center;
     width:35%;
+    height:45;
+    text-align:center;
     font-size:4.8rem;
 }
+/*TODO: Change sponsors to be scroll like mobile*/
 .sponsors-container .sponsor-images{
     width:auto;
     height:100%;
@@ -139,6 +145,22 @@ body{margin:0;overflow-x:hidden;}
     max-height: 30rem;
     margin:0 1% 1% 0;
 }
+/*Section 3a: Mobile Sponsors*/
+@media screen and (max-width: 650px){
+    .sponsors-container{
+        flex-direction:column;
+        text-align:center;
+    }
+    .sponsors-container #sponsor-title{width:100%;}
+    .sponsors-container .sponsor-images{
+        flex-flow:row;
+        height:45%;
+        width:100%;
+        overflow-x:scroll;
+    }
+    .sponsors-container .sponsor-images img{margin:0 2% 0 2%;}
+}
+
 /*Section 4a: Footer*/
 footer{
     display:flex;
@@ -172,4 +194,22 @@ footer .social-media a{
 footer .social-media img{
     max-width:3rem;
 }
-
+/*Section 4a: Mobile Footer*/
+@media screen and (max-width: 650px){
+    footer{
+        position:relative;
+    }
+    footer h1{
+        padding-left:2%;
+        color:white;
+        font-size:1.5rem;
+    }
+    footer .social-media{
+        position:abolute;
+        right:0;
+        width:fit-content;
+        padding-right:2rem;
+        display:flex;
+        align-items:center;
+    }
+}
