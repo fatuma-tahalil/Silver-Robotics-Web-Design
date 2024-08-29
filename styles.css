@@ -145,6 +145,7 @@ body{margin:0;overflow-x:hidden;}
     max-height: 30rem;
     margin:0 1% 1% 0;
 }
+
 /*Section 3a: Mobile Sponsors*/
 @media screen and (max-width: 650px){
     .sponsors-container{
@@ -157,6 +158,8 @@ body{margin:0;overflow-x:hidden;}
         height:45%;
         width:100%;
         overflow-x:scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
     .sponsors-container .sponsor-images img{margin:0 2% 0 2%;}
 }
@@ -174,6 +177,7 @@ footer{
 }
 
 footer h1{
+    position:relative;
     padding-left:1%;
     color:white;
     font-size:2.3rem;
@@ -181,7 +185,8 @@ footer h1{
 footer .social-media{
     position:relative;
     right:0;
-    width:12%;
+    width:min-content;
+    padding-right:3%;
     display:flex;
     align-items:center;
 }
@@ -196,20 +201,7 @@ footer .social-media img{
 }
 /*Section 4a: Mobile Footer*/
 @media screen and (max-width: 650px){
-    footer{
-        position:relative;
-    }
-    footer h1{
-        padding-left:2%;
-        color:white;
-        font-size:1.5rem;
-    }
-    footer .social-media{
-        position:abolute;
-        right:0;
-        width:fit-content;
-        padding-right:2rem;
-        display:flex;
-        align-items:center;
-    }
+    footer{position:relative;}
+    footer h1{font-size:1.5rem;}
+    footer .social-media a{font-size:1rem;}
 }
