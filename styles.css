@@ -60,12 +60,13 @@ body{margin:0;overflow-x:hidden;}
     display:flex;
     justify-content:center;
     margin-bottom:5%;
+    position:relative;
 }
 .intro-container .intro1 img{max-width:100%; } 
 .intro-container .intro1 h1{
     position:absolute;
     color:white;
-    bottom:3rem;
+    bottom:49%;
     z-index:2;
     user-select:none;
     font-size:5rem;
@@ -88,11 +89,9 @@ body{margin:0;overflow-x:hidden;}
 .intro-container .intro2 img{max-width:45%;}
 
 /*Section 2a: Mobile Introductions*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 650px){
     .intro-container .intro1 h1{
-        font-size:1rem;
-        border:2px solid black;
-
+        font-size:3.5rem;
     }
 }
 
