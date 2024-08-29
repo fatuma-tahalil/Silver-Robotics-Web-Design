@@ -21,8 +21,9 @@
     font-style: normal;
 }
 
-html{scroll-behavior: smooth; overflow-x:hidden;}
-body{margin:0;overflow-x:hidden;}
+html{scroll-behavior: smooth;}
+body{margin:0;}
+html, body{min-width:300px;overflow-x:hidden;}
 .large-spacing{height:9rem;}
 .medium-spacing{height:6rem;}
 
@@ -50,6 +51,42 @@ body{margin:0;overflow-x:hidden;}
 /*Section 1a: Mobile Navigation Bar*/
 @media screen and (max-width: 600px){
     .nav{display:none;}
+
+    .dropdown-wrapper{
+        display:block;
+        width:100%;
+        height:2.5rem;
+        position:relative;
+    }
+    .dropdown-wrapper .dropdown-trigger{
+        padding-left:5vw;
+        padding-bottom:2vh;
+        padding-top:2vh;
+    }
+    .dropdown-wrapper .dropdown-content{
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        display:none;
+    }
+    .dropdown-wrapper .dropdown-content li {list-style-type:none;}
+    .dropdown-wrapper .dropdown-content li a{
+        display:block;
+        text-decoration:none;
+        font-size:2rem;
+        font-family:'Lucida Sans';
+        padding-top:1%;
+        padding-bottom:1%;
+        border-bottom:1px solid black;
+        width:100%;
+        color:black;
+        padding-left:5vw;
+        width:100%;
+        list-style-type:none;
+    }
+    .dropdown-wrapper .dropdown-content #home{border-top:1px solid black;}
+    .dropdown-wrapper:hover .dropdown-content{display:block; }
+    .dropdown-wrapper:hover .intro1{z-index:1;}
+
 }
 
 /*Section 2a: Introductions*/
@@ -76,27 +113,39 @@ body{margin:0;overflow-x:hidden;}
     width:100%;
     justify-content:space-evenly;
     align-items:center;
+    padding:3%;
 }
 .intro-container .intro2 .intro-text{
     width:35%;
     height:min-content;
+    flex-grow:2;
 }
 .intro-container .intro2 .intro-text h1{
     text-align:center;
     font-size:5rem;
     margin:0;
 }
-.intro-container .intro2 .intro-text p{width:100%; font-size:1.2rem; line-height:140%;}
+.intro-container .intro2 .intro-text p{
+    width:100%; 
+    font-size:1.2rem; 
+    line-height:140%;
+    padding: 3% 11% 0 11%;
+}
 .intro-container .intro2 img{max-width:45%;}
 /*Section 2a: Mobile Introductions*/
 @media screen and (max-width: 650px){
     .medium-spacing{height:2rem;}
     .large-spacing{height:4rem;}
-    .intro-container .intro1 h1{font-size:4rem;}
+    .intro-container .intro1 h1{font-size:4rem; bottom:40%;}
     .intro-container .intro2{flex-direction: column;}
     .intro-container .intro2 .intro-text{width:80%;}
     .intro-container .intro2 .intro-text h1{font-size:3.5rem;}
     .intro-container .intro2 img{max-width:80%;}
+}
+/*Breaking point for Silver Robotics text*/
+/*TODO: Make Silver Robotics text more responsive*/
+@media screen and (max-width:500px){
+    .intro-container .intro1 h1{font-size:2rem;}
 }
 
 /*Section 2b: About*/
@@ -131,11 +180,13 @@ body{margin:0;overflow-x:hidden;}
 }
 /*TODO: Change sponsors to be scroll like mobile*/
 .sponsors-container .sponsor-images{
-    width:auto;
-    height:100%;
+    width:100%;
     display:flex;
     flex-direction:row;
     padding:0 2% 0 2%;
+    overflow-x:scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 .sponsors-container .sponsor-images img{
     max-width: 20rem;
@@ -175,7 +226,7 @@ footer{
 
 footer h1{
     position:relative;
-    padding-left:1%;
+    padding: 1%;
     color:white;
     font-size:2.3rem;
 }
