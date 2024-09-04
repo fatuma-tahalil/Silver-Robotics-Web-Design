@@ -61,6 +61,7 @@ html, body{min-width:300px;overflow-x:hidden;}
     .nav{display:none;}
 
     .dropdown-wrapper{
+        position:fixed;
         display:block;
         width:100%;
         height:2.5rem;
@@ -70,11 +71,16 @@ html, body{min-width:300px;overflow-x:hidden;}
         padding-left:5vw;
         padding-bottom:2vh;
         padding-top:2vh;
+        border:1px solid red;
     }
     .dropdown-wrapper .dropdown-content{
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 2;
         display:none;
+        position:relative;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(10px);
+        background-image: blur(30px) white;
     }
     .dropdown-wrapper .dropdown-content li {list-style-type:none;}
     .dropdown-wrapper .dropdown-content li a{
