@@ -22,8 +22,10 @@
 }
 
 html{scroll-behavior: smooth;}
-body{margin:0;}
-html, body{min-width:300px;overflow-x:hidden;}
+body{margin:0; min-width:300px;}
+html, body{
+    overflow-x:hidden;
+}
 .large-spacing{height:9rem;}
 .medium-spacing{height:6rem;}
 
@@ -66,12 +68,13 @@ html, body{min-width:300px;overflow-x:hidden;}
         width:100%;
         height:2.5rem;
         position:relative;
+        padding:3px solid purple;
     }
     .dropdown-wrapper .dropdown-trigger{
-        padding-left:5vw;
-        padding-bottom:2vh;
-        padding-top:2vh;
-        border:1px solid red;
+        margin:2% 0 0 2%;
+        min-width:30px;
+        min-height:30px;
+        z-index:2;
     }
     .dropdown-wrapper .dropdown-content{
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -98,8 +101,7 @@ html, body{min-width:300px;overflow-x:hidden;}
         list-style-type:none;
     }
     .dropdown-wrapper .dropdown-content #home{border-top:1px solid black;}
-    .dropdown-wrapper:hover .dropdown-content{display:block; }
-    .dropdown-wrapper:hover .intro1{z-index:1;}
+    .dropdown-wrapper:hover .dropdown-content{display:block;}
 
 }
 
@@ -172,6 +174,7 @@ html, body{min-width:300px;overflow-x:hidden;}
     height:min-content;
     font-size:1.2rem;
     line-height:140%;
+    max-width:900px;
 }
 .mission-container{
     margin: 0 auto 0 auto;
@@ -181,6 +184,7 @@ html, body{min-width:300px;overflow-x:hidden;}
     height:min-content;
     font-size:1.2rem;
     line-height:140%;
+    max-width:900px;
 }
 
 /*Section 2c: Robots*/
