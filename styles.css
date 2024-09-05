@@ -28,6 +28,10 @@ html, body{
 }
 .large-spacing{height:9rem;}
 .medium-spacing{height:6rem;}
+@media (max-width:961px){
+    .large-spacing{height:6rem;}
+    .medium-spacing{height:4rem;}
+}
 
 /*Section 1a: Navigation Bar*/
 .nav{
@@ -68,7 +72,6 @@ html, body{
         width:100%;
         height:2.5rem;
         position:relative;
-        padding:3px solid purple;
     }
     .dropdown-wrapper .dropdown-trigger{
         margin:2% 0 0 2%;
@@ -190,18 +193,38 @@ html, body{
 /*Section 2c: Robots*/
 .robot-container .robot-box{
     display:flex;
-    flex-direction:row;
+    flex-flow:row wrap;
     justify-content:space-around;
+    margin:0;
 }
 .robot-container .robot-box img{
+    min-width:fit-content;
     max-width:28%;
+    max-height:350px;
 }
 .robot-container .robot-box .robot-text{
     padding:2%;
-    max-width:30%;
+    max-width:35%;
 }
 .robot-container .robot-box .robot-text p{line-height:160%;}
-
+/*Robots for tablets*/
+@media (max-width:641px){
+    .robot-container .robot-box{
+        padding-top:15%;;
+        display:flex;
+        flex-flow:column;
+        margin:0;
+        align-content:center;
+    }
+    .robot-container .robot-box img{
+        min-width:fit-content;
+        align-self:center;
+    }
+    .robot-container .robot-box .robot-text{
+        max-width:70%;
+        align-self:center;
+    }
+}
 /*Section 3a: Sponors*/
 .sponsors-container{
     display:flex;
@@ -285,7 +308,6 @@ footer .social-media img{
 }
 /*Section 4a: Mobile Footer*/
 @media screen and (max-width: 650px){
-    footer{position:relative;}
     footer h1{font-size:1.5rem;}
     footer .social-media a{font-size:1rem;}
 }
