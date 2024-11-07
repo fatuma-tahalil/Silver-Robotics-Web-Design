@@ -1,1 +1,1 @@
-The official website for FRC 9575.
+FRC 9575 Website
