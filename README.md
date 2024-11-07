@@ -1,1 +1,1 @@
-frc 9575 Website
+FRC 9575 Website
