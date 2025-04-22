@@ -1,313 +1,372 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    box-sizing:border-box;
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
 }
 /*Font classes*/
-.font-nunito{
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
-.font-righteous{
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.font-righteous {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.font-notoSans{
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+.font-notoSans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-html{scroll-behavior: smooth;}
-body{margin:0; min-width:300px;}
-html, body{
-    overflow-x:hidden;
+html {
+  scroll-behavior: smooth;
 }
-.large-spacing{height:9rem;}
-.medium-spacing{height:6rem;}
-@media (max-width:961px){
-    .large-spacing{height:6rem;}
-    .medium-spacing{height:4rem;}
+body {
+  margin: 0;
+  min-width: 300px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.large-spacing {
+  height: 9rem;
+}
+.medium-spacing {
+  height: 6rem;
+}
+@media (max-width: 961px) {
+  .large-spacing {
+    height: 6rem;
+  }
+  .medium-spacing {
+    height: 4rem;
+  }
 }
 
 /*Section 1a: Navigation Bar*/
-.nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index: index 2;
-    margin:0;
-    padding: 2%;
-    display: flex;
-    justify-content:flex-end;
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: index 2;
+  margin: 0;
+  padding: 2%;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  background-image: blur(30px) white;
+}
+.nav .links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav .links .line {
+  user-select: none;
+}
+.nav a {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.dropdown-wrapper {
+  display: none;
+}
+/*Section 1a: Mobile Navigation Bar*/
+@media screen and (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+
+  .dropdown-wrapper {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    position: relative;
+  }
+  .dropdown-wrapper .dropdown-trigger {
+    margin: 2% 0 0 2%;
+    min-width: 30px;
+    min-height: 30px;
+    z-index: 2;
+  }
+  .dropdown-wrapper .dropdown-content {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    display: none;
+    position: relative;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(10px);
     background-image: blur(30px) white;
-}
-.nav .links{
-    width:50%;
-    display:flex;
-    justify-content:space-evenly;
-}
-.nav .links .line{
-    user-select:none;
-}
-.nav a{
-    font-size:1.3rem;
-    color:black;
+  }
+  .dropdown-wrapper .dropdown-content li {
+    list-style-type: none;
+  }
+  .dropdown-wrapper .dropdown-content li a {
+    display: block;
     text-decoration: none;
-    font-family:sans-serif;
-}
-.dropdown-wrapper{display:none;}
-/*Section 1a: Mobile Navigation Bar*/
-@media screen and (max-width: 600px){
-    .nav{display:none;}
-
-    .dropdown-wrapper{
-        position:fixed;
-        display:block;
-        width:100%;
-        height:2.5rem;
-        position:relative;
-    }
-    .dropdown-wrapper .dropdown-trigger{
-        margin:2% 0 0 2%;
-        min-width:30px;
-        min-height:30px;
-        z-index:2;
-    }
-    .dropdown-wrapper .dropdown-content{
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 2;
-        display:none;
-        position:relative;
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(10px);
-        background-image: blur(30px) white;
-    }
-    .dropdown-wrapper .dropdown-content li {list-style-type:none;}
-    .dropdown-wrapper .dropdown-content li a{
-        display:block;
-        text-decoration:none;
-        font-size:2rem;
-        font-family:'Lucida Sans';
-        padding-top:1%;
-        padding-bottom:1%;
-        border-bottom:1px solid black;
-        width:100%;
-        color:black;
-        padding-left:5vw;
-        width:100%;
-        list-style-type:none;
-    }
-    .dropdown-wrapper .dropdown-content #home{border-top:1px solid black;}
-    .dropdown-wrapper:hover .dropdown-content{display:block;}
-
+    font-size: 2rem;
+    font-family: "Lucida Sans";
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid black;
+    width: 100%;
+    color: black;
+    padding-left: 5vw;
+    width: 100%;
+    list-style-type: none;
+  }
+  .dropdown-wrapper .dropdown-content #home {
+    border-top: 1px solid black;
+  }
+  .dropdown-wrapper:hover .dropdown-content {
+    display: block;
+  }
 }
 
 /*Section 2a: Introductions*/
-.intro-container{
-    display:block;
+.intro-container {
+  display: block;
 }
-.intro-container .intro1{
-    display:flex;
-    justify-content:center;
-    margin-bottom:5%;
-    position:relative;
-    z-index:0;
+.intro-container .intro1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  position: relative;
+  z-index: 0;
 }
-.intro-container .intro1 img{max-width:100%;} 
-.intro-container .intro1 h1{
-    position:absolute;
-    color:white;
-    bottom:49%;
-    z-index:2;
-    user-select:none;
-    font-size:5rem;
+.intro-container .intro1 img {
+  max-width: 100%;
 }
-.intro-container .intro2{
-    display:flex;
-    width:100%;
-    justify-content:space-evenly;
-    align-items:center;
-    padding:3%;
+.intro-container .intro1 h1 {
+  position: absolute;
+  color: white;
+  bottom: 49%;
+  z-index: 2;
+  user-select: none;
+  font-size: 5rem;
 }
-.intro-container .intro2 .intro-text{
-    width:35%;
-    height:min-content;
-    flex-grow:2;
+.intro-container .intro2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3%;
 }
-.intro-container .intro2 .intro-text h1{
-    text-align:center;
-    font-size:5rem;
-    margin:0;
+.intro-container .intro2 .intro-text {
+  width: 35%;
+  height: min-content;
+  flex-grow: 2;
 }
-.intro-container .intro2 .intro-text p{
-    width:100%; 
-    font-size:1.2rem; 
-    line-height:140%;
-    padding: 3% 11% 0 11%;
+.intro-container .intro2 .intro-text h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin: 0;
 }
-.intro-container .intro2 img{max-width:45%;}
+.intro-container .intro2 .intro-text p {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 140%;
+  padding: 3% 11% 0 11%;
+}
+.intro-container .intro2 img {
+  max-width: 45%;
+}
 /*Section 2a: Mobile Introductions*/
-@media screen and (max-width: 650px){
-    .medium-spacing{height:2rem;}
-    .large-spacing{height:4rem;}
-    .intro-container .intro1 h1{font-size:4rem; bottom:40%;}
-    .intro-container .intro2{flex-direction: column;}
-    .intro-container .intro2 .intro-text{width:80%;}
-    .intro-container .intro2 .intro-text h1{font-size:3.5rem;}
-    .intro-container .intro2 img{max-width:80%;}
+@media screen and (max-width: 650px) {
+  .medium-spacing {
+    height: 2rem;
+  }
+  .large-spacing {
+    height: 4rem;
+  }
+  .intro-container .intro1 h1 {
+    font-size: 4rem;
+    bottom: 40%;
+  }
+  .intro-container .intro2 {
+    flex-direction: column;
+  }
+  .intro-container .intro2 .intro-text {
+    width: 80%;
+  }
+  .intro-container .intro2 .intro-text h1 {
+    font-size: 3.5rem;
+  }
+  .intro-container .intro2 img {
+    max-width: 80%;
+  }
 }
 /*Breaking point for Silver Robotics text*/
 /*TODO: Make Silver Robotics text more responsive*/
-@media screen and (max-width:500px){
-    .intro-container .intro1 h1{font-size:2rem;}
+@media screen and (max-width: 500px) {
+  .intro-container .intro1 h1 {
+    font-size: 2rem;
+  }
 }
 
 /*Section 2b: About*/
-.about-container{
-    margin: 0 auto 0 auto;
-    width:90%;
-    align-self:center;
-    padding:2%;
-    height:min-content;
-    font-size:1.2rem;
-    line-height:140%;
-    max-width:900px;
+.about-container {
+  margin: 0 auto 0 auto;
+  width: 90%;
+  align-self: center;
+  padding: 2%;
+  height: min-content;
+  font-size: 1.2rem;
+  line-height: 140%;
+  max-width: 900px;
 }
-.mission-container{
-    margin: 0 auto 0 auto;
-    width:90%;
-    align-self:center;
-    padding:2%;
-    height:min-content;
-    font-size:1.2rem;
-    line-height:140%;
-    max-width:900px;
+.mission-container {
+  margin: 0 auto 0 auto;
+  width: 90%;
+  align-self: center;
+  padding: 2%;
+  height: min-content;
+  font-size: 1.2rem;
+  line-height: 140%;
+  max-width: 900px;
 }
 
 /*Section 2c: Robots*/
-.robot-container .robot-box{
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-around;
-    margin:0;
+.robot-container .robot-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0;
+  margin-bottom: 60px;
 }
-.robot-container .robot-box img{
-    min-width:fit-content;
-    max-width:28%;
-    max-height:350px;
+.robot-container .robot-box img {
+  min-width: fit-content;
+  max-width: 28%;
+  max-height: 350px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
-.robot-container .robot-box .robot-text{
-    padding:2%;
-    max-width:35%;
+.robot-container .robot-box .robot-text {
+  padding: 2%;
+  max-width: 35%;
 }
-.robot-container .robot-box .robot-text p{line-height:160%;}
+.robot-container .robot-box .robot-text p {
+  line-height: 160%;
+}
 /*Robots for tablets*/
-@media (max-width:641px){
-    .robot-container .robot-box{
-        padding-top:15%;;
-        display:flex;
-        flex-flow:column;
-        margin:0;
-        align-content:center;
-    }
-    .robot-container .robot-box img{
-        min-width:fit-content;
-        align-self:center;
-    }
-    .robot-container .robot-box .robot-text{
-        max-width:70%;
-        align-self:center;
-    }
+@media (max-width: 641px) {
+  .robot-container .robot-box {
+    padding-top: 15%;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    align-content: center;
+  }
+  .robot-container .robot-box img {
+    min-width: fit-content;
+    align-self: center;
+  }
+  .robot-container .robot-box .robot-text {
+    max-width: 70%;
+    align-self: center;
+  }
 }
 /*Section 3a: Sponors*/
-.sponsors-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    align-content:center;
+.sponsors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
-.sponsors-container #sponsor-title{
-    font-weight:900;
-    font-size:4.8rem;
+.sponsors-container #sponsor-title {
+  font-weight: 900;
+  font-size: 4.8rem;
 }
 /*TODO: Change sponsors to be scroll like mobile*/
-.sponsors-container .sponsor-images{
-    width:100%;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-evenly;
-    padding:0 2% 0 2%;
-    overflow-x:scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+.sponsors-container .sponsor-images {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 2% 0 2%;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-.sponsors-container .sponsor-images img{
-    max-width: 20rem;
-    max-height: 30rem;
-    margin:0 1% 0 0;
+.sponsors-container .sponsor-images img {
+  max-width: 20rem;
+  max-height: 30rem;
+  margin: 0 1% 0 0;
 }
 
 /*Section 3a: Mobile Sponsors*/
-@media screen and (max-width: 650px){
-    .sponsors-container{
-        flex-direction:column;
-        text-align:center;
-    }
-    .sponsors-container #sponsor-title{width:100%;}
-    .sponsors-container .sponsor-images{
-        flex-flow:row;
-        height:45%;
-        width:100%;
-        overflow-x:scroll;
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-    .sponsors-container .sponsor-images img{margin:0 2% 0 2%;}
+@media screen and (max-width: 650px) {
+  .sponsors-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sponsors-container #sponsor-title {
+    width: 100%;
+  }
+  .sponsors-container .sponsor-images {
+    flex-flow: row;
+    height: 45%;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .sponsors-container .sponsor-images img {
+    margin: 0 2% 0 2%;
+  }
 }
 
 /*Section 4a: Footer*/
-footer{
-    display:flex;
-    position:relative;
-    justify-content:space-between;
-    bottom:0;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    background-color:rgb(21, 17, 17);
+footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  background-color: rgb(21, 17, 17);
 }
 
-footer h1{
-    position:relative;
-    padding: 1%;
-    color:white;
-    font-size:2.3rem;
+footer h1 {
+  position: relative;
+  padding: 1%;
+  color: white;
+  font-size: 2.3rem;
 }
-footer .social-media{
-    position:relative;
-    right:0;
-    width:min-content;
-    padding-right:3%;
-    display:flex;
-    align-items:center;
+footer .social-media {
+  position: relative;
+  right: 0;
+  width: min-content;
+  padding-right: 3%;
+  display: flex;
+  align-items: center;
 }
-footer .social-media a{
-    color:white;
-    text-decoration:none;
-    padding-right:6%;
-    font-size:1.2rem;
+footer .social-media a {
+  color: white;
+  text-decoration: none;
+  padding-right: 6%;
+  font-size: 1.2rem;
 }
-footer .social-media img{
-    max-width:3rem;
+footer .social-media img {
+  max-width: 3rem;
 }
 /*Section 4a: Mobile Footer*/
-@media screen and (max-width: 650px){
-    footer h1{font-size:1.5rem;}
-    footer .social-media a{font-size:1rem;}
+@media screen and (max-width: 650px) {
+  footer h1 {
+    font-size: 1.5rem;
+  }
+  footer .social-media a {
+    font-size: 1rem;
+  }
 }
