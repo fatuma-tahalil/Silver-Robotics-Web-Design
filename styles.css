@@ -299,8 +299,8 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 .sponsors-container .sponsor-images img {
-  max-width: 20rem;
-  max-height: 30rem;
+  max-width: 35rem;
+  max-height: 15rem;
   margin: 0 1% 0 0;
 }
 
